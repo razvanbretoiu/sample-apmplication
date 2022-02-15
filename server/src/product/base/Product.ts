@@ -62,17 +62,6 @@ class Product {
 
   @ApiProperty({
     required: false,
-    type: Number,
-  })
-  @IsNumber()
-  @IsOptional()
-  @Field(() => Number, {
-    nullable: true,
-  })
-  itemPriceUpdated!: number | null;
-
-  @ApiProperty({
-    required: false,
     type: String,
   })
   @IsString()
@@ -90,6 +79,17 @@ class Product {
   @Type(() => Order)
   @IsOptional()
   orders?: Array<Order>;
+
+  @ApiProperty({
+    required: false,
+    type: Number,
+  })
+  @IsNumber()
+  @IsOptional()
+  @Field(() => Number, {
+    nullable: true,
+  })
+  prices!: number | null;
 
   @ApiProperty({
     required: true,

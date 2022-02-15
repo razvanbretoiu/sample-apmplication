@@ -41,6 +41,7 @@ model Customer {
   lastName  String?
   orders    Order[]
   phone     String?
+  rate      String?
   updatedAt DateTime @updatedAt
 }
 
@@ -63,5 +64,6 @@ model Product {
   itemPrice   Float?
   name        String?
   orders      Order[]
+  prices      Float?
   updatedAt   DateTime @updatedAt
 }
