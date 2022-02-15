@@ -316,6 +316,7 @@ export class AddressControllerBase {
         id: true,
         lastName: true,
         phone: true,
+        rate: true,
         updatedAt: true,
       },
     });

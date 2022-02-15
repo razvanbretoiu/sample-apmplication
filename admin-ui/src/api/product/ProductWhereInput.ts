@@ -7,4 +7,5 @@ export type ProductWhereInput = {
   id?: StringFilter;
   itemPrice?: FloatNullableFilter;
   name?: StringNullableFilter;
+  prices?: FloatNullableFilter;
 };

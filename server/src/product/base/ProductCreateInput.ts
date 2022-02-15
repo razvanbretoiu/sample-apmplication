@@ -46,5 +46,16 @@ class ProductCreateInput {
     nullable: true,
   })
   name?: string | null;
+
+  @ApiProperty({
+    required: false,
+    type: Number,
+  })
+  @IsNumber()
+  @IsOptional()
+  @Field(() => Number, {
+    nullable: true,
+  })
+  prices?: number | null;
 }
 export { ProductCreateInput };
