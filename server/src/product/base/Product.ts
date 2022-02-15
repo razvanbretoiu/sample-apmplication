@@ -62,6 +62,17 @@ class Product {
 
   @ApiProperty({
     required: false,
+    type: Number,
+  })
+  @IsNumber()
+  @IsOptional()
+  @Field(() => Number, {
+    nullable: true,
+  })
+  itemPriceUpdated!: number | null;
+
+  @ApiProperty({
+    required: false,
     type: String,
   })
   @IsString()
