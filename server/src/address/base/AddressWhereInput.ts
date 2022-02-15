@@ -53,6 +53,17 @@ class AddressWhereInput {
 
   @ApiProperty({
     required: false,
+    type: StringNullableFilter,
+  })
+  @Type(() => StringNullableFilter)
+  @IsOptional()
+  @Field(() => StringNullableFilter, {
+    nullable: true,
+  })
+  country?: StringNullableFilter;
+
+  @ApiProperty({
+    required: false,
     type: StringFilter,
   })
   @Type(() => StringFilter)
