@@ -14,4 +14,9 @@ export class CustomerController extends CustomerControllerBase {
   ) {
     super(service, rolesBuilder);
   }
+  
+  @common.Get('razvan')
+  async getRazvan(@common.Req() request: Request, @nestAccessControl.UserRoles() userRoles: string[]): Promise<string> {  
+    return "Razvan"
+  }
 }
